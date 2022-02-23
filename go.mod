@@ -1,4 +1,4 @@
-module glinke
+module github.com/jcatala/glinke
 
 go 1.17
 
