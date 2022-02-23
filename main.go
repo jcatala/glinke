@@ -16,22 +16,16 @@ import (
 
 )
 
-type core struct {
-	urls []string
-	results map[string] []string
-
-}
 
 var v bool
 
 const version = "0.0.1"
-func main() {
-	//fmt.Println("testing")
 
-	verbose := flag.Bool("verbose", false, "To be verbose")
-	//url := flag.String("url","", "input url, if not, stdin is used")
+func main() {
+
+	verbose := flag.Bool("v", false, "To be verbose")
 	concurrency := flag.Int("threads", 10, "Threads to use, default: 10")
-	t := flag.Int("timeout",1000,"timeout in milliseconds")
+	t := flag.Int("t",1000,"timeout in milliseconds")
 
 	flag.Parse()
 	input := make(chan string)
@@ -39,6 +33,7 @@ func main() {
 	v = *verbose
 	if *verbose{
 		fmt.Println("Verbose mode")
+		fmt.Printf("Version: %s\n", version)
 	}
 	// time duration for net.Dialer
 	timeout := time.Duration(*t * 100000000)
