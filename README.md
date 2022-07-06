@@ -10,6 +10,7 @@ feel free to use as you want :D
 
 ```bash
 go get github.com/jcatala/glinke
+go install github.com/jcatala/glinke@latest
 ```
 
 # Usage

@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/jcatala/glinke/scrapit"
 	"bufio"
 	"crypto/tls"
 	"flag"
 	"fmt"
+	"github.com/jcatala/glinke/scrapit"
 	"log"
 	"net"
 	"net/http"
@@ -13,8 +13,6 @@ import (
 	"strings"
 	"sync"
 	"time"
-
-
 )
 
 
